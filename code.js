@@ -31,10 +31,12 @@ console.log(getNumericTimestamp())
 
 let time = getNumericTimestamp()
 
+let now2 = getDateObject()
+
 let dateTwo = getNumericTimestamp()
 
 console.assert(
-    time === now.getTime(),
+    time === now2.getTime(),
     "getNumericTimestamp does not return correct time"
 )
 
@@ -101,7 +103,7 @@ function getFormattedDate(date) {
         formattedDate = formattedDate + " - " + (parseInt(time[0]) - 12) 
     } else {
         timeOfDay = "am"
-        formattedDate = formattedDate + " - " + time[0]
+        formattedDate = formattedDate + " - " + parseInt(time[0])
     }
     formattedDate = formattedDate + ":" + time[1] + timeOfDay
     console.log(formattedDate)
@@ -109,12 +111,12 @@ function getFormattedDate(date) {
 }
 
 console.assert(
-    getFormattedDate(new Date("April 16, 1996 9:16:00")) === "4/16/96 - 09:16am",
+    getFormattedDate(new Date("April 16, 1996 9:16:00")) === "4/16/96 - 9:16am",
     "getFormattedDate does not return correct date"
 )
 
 console.assert(
-    getFormattedDate(new Date("September 23, 2021 9:16:00")) === "9/23/21 - 09:16am",
+    getFormattedDate(new Date("September 23, 2021 9:16:00")) === "9/23/21 - 9:16am",
     "getFormattedDate does not return correct date"
 )
 
