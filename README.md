@@ -18,7 +18,7 @@ _(Put your project plan here. It could be pseudocode, an outline-style developme
 
 For a software developer, what are the benefits of good unit tests? Are there any drawbacks to writing unit tests?
 
-_(Put your reflection answer here.)_
+The benefits of a good unit test is that it allows me to discover edge cases that I may not initially consider. For example, when finding the difference between 2 dates, I noticed that if there was over a 12 hour difference between the times, then I would not get the the correct difference, and without unit tests, I would not have allowed me to notice that nor would it be simple to figure out the solution to the problem.
 
 ### Advanced Level Only
 
